@@ -12,7 +12,7 @@ namespace OregonTrail
 
 
             // Inventory (the items carried on person)
-           // double money;
+            // double money;
 
             //Store (items for sale)
 
@@ -20,23 +20,30 @@ namespace OregonTrail
 
             //Wagon (items on buggie)
 
+            //Create player character
+            
 
-
-            //Meet the Sheriff
-            //player has to create a name for themself, then guided to inn.
+            //Meet the Sheriff, who will ask your character's name
+            
             Console.WriteLine("Hey there weary traveler! I dont believe we've met.");
             Console.WriteLine("I'm Sheriff Snoke. What's your name?\n\n");
 
-            string playerName = Console.ReadLine();
+            //create and store name for playable charcter
+            Player player = new Player()
+            {
+                Name = Console.ReadLine()
+            }; 
 
             Console.Clear();
-            Console.WriteLine("Well, nice to meet you " + playerName + ". Since you're new here let me point you in the right direction.");
+            Console.WriteLine("Well, nice to meet you " + player.Name + ". Since you're new here let me point you in the right direction.");
             Console.WriteLine("That building right there is the Inn. Head straight there Connor willl help you with anything you need.\n");
             Console.WriteLine("Push ENTER to go to inn\n");
             Console.ReadLine();
 
 
             //Meet the inn keeper and continue to the store
+
+            //motis engineering recruting ge appliances software qa engineer tester They are a placer company for GE.
 
 
             Console.Clear();
@@ -53,7 +60,7 @@ namespace OregonTrail
             // Player gets to purchase items before heading on adventure
 
             Console.Clear();
-            Console.WriteLine("Howdy " + playerName + "! Welcome to the Journeyman's Mercantile." +
+            Console.WriteLine("Howdy " + player.Name + "! Welcome to the Journeyman's Mercantile." +
                 " There's a large selection of item. \nChoose what you like.\nEhem...\nFor the right price that is.\n\n");
             Console.Write("Enter the item you'd like to purchase\n\n  #1: Food\n\n  #2: Ammo\n\n  #3: Repair kit\n\n\n");
             
