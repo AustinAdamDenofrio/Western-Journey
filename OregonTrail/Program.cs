@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace OregonTrail
 {
@@ -119,4 +119,5 @@ namespace OregonTrail
             Console.WriteLine(damageQuantity);
         } 
     }
+
 }
