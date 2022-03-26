@@ -9,7 +9,9 @@ namespace OregonTrail
         {
 
 
-
+            EnemyDamage();
+            EnemyDamage();
+            EnemyDamage();
 
             // Inventory (the items carried on person)
             // double money;
@@ -62,7 +64,8 @@ namespace OregonTrail
             Console.Clear();
             Console.WriteLine("Howdy " + player.Name + "! Welcome to the Journeyman's Mercantile." +
                 " There's a large selection of item. \nChoose what you like.\nEhem...\nFor the right price that is.\n\n");
-            Console.Write("Enter the item you'd like to purchase\n\n  #1: Food\n\n  #2: Ammo\n\n  #3: Repair kit\n\n\n");
+            Console.Write("Enter the item you'd like to purchase\n\n  #1: Food\n  #2: Ammo\n  #3: Repair kit\n" +
+                "  #4: Lever Action Rifle\n\n exit: Leave store\n\n\n");
             
 
 
@@ -102,11 +105,18 @@ namespace OregonTrail
 
             //  Use "IF" statement to find the selection the user made
 
-            
-
-            Console.ReadLine();
-
 
         }
+
+        /// <summary>
+        /// This is the method generator for how much damage an enemy will do per turn.
+        /// </summary>
+        static void EnemyDamage()
+        {
+            //Number generator for a random number
+            Random damageGen = new Random();
+            int damageQuantity = damageGen.Next(5, 10);
+            Console.WriteLine(damageQuantity);
+        } 
     }
 }
