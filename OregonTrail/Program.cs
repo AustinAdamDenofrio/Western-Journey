@@ -8,11 +8,6 @@ namespace OregonTrail
         static void Main(string[] args)
         {
 
-
-            EnemyDamage();
-            EnemyDamage();
-            EnemyDamage();
-
             // Inventory (the items carried on person)
             // double money;
 
