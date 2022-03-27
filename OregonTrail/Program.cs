@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace OregonTrail
 {
@@ -7,7 +7,15 @@ namespace OregonTrail
 
         static void Main(string[] args)
         {
+<<<<<<< HEAD
 
+=======
+            PlayerDamage();
+            PlayerDamage();
+            PlayerDamage();
+            PlayerDamage();
+            PlayerDamage();
+>>>>>>> cff727af3ff9961a31f5f3f05ec7376024010f62
             // Inventory (the items carried on person)
             // double money;
 
@@ -18,10 +26,10 @@ namespace OregonTrail
             //Wagon (items on buggie)
 
             //Create player character
-            
+
 
             //Meet the Sheriff, who will ask your character's name
-            
+
             Console.WriteLine("Hey there weary traveler! I dont believe we've met.");
             Console.WriteLine("I'm Sheriff Snoke. What's your name?\n\n");
 
@@ -29,7 +37,7 @@ namespace OregonTrail
             Player player = new Player()
             {
                 Name = Console.ReadLine()
-            }; 
+            };
 
             Console.Clear();
             Console.WriteLine("Well, nice to meet you " + player.Name + ". Since you're new here let me point you in the right direction.");
@@ -61,7 +69,7 @@ namespace OregonTrail
                 " There's a large selection of item. \nChoose what you like.\nEhem...\nFor the right price that is.\n\n");
             Console.Write("Enter the item you'd like to purchase\n\n  #1: Food\n  #2: Ammo\n  #3: Repair kit\n" +
                 "  #4: Lever Action Rifle\n\n exit: Leave store\n\n\n");
-            
+
 
 
             //create a loop that allows the user to buy more than one item.
@@ -112,6 +120,31 @@ namespace OregonTrail
             Random damageGen = new Random();
             int damageQuantity = damageGen.Next(5, 10);
             Console.WriteLine(damageQuantity);
-        } 
+        }
+
+        /// <summary>
+        /// This is the method that generates damage dealt by the playable character
+        /// </summary>
+        static void PlayerDamage()
+        {
+            Random playerDamageGen = new Random();
+            int playerDamageQuantity = playerDamageGen.Next(35, 60);
+
+            //This generates a value that can be used to determain if the player strikes with a critical strike
+            
+            Random critDamageGen = new Random();
+            int critValue = critDamageGen.Next(0, 100);
+
+            //This is how you decide the odds of Critically striking and the multiplier for the crit strike
+
+            if (critValue >= 75)
+            {
+                playerDamageQuantity = playerDamageQuantity * 2;
+            }
+
+            Console.WriteLine(playerDamageQuantity);
+            
+        }
     }
+
 }
