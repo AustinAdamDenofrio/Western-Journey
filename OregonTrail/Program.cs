@@ -7,15 +7,7 @@ namespace OregonTrail
 
         static void Main(string[] args)
         {
-<<<<<<< HEAD
 
-=======
-            PlayerDamage();
-            PlayerDamage();
-            PlayerDamage();
-            PlayerDamage();
-            PlayerDamage();
->>>>>>> cff727af3ff9961a31f5f3f05ec7376024010f62
             // Inventory (the items carried on person)
             // double money;
 
@@ -39,10 +31,12 @@ namespace OregonTrail
                 Name = Console.ReadLine()
             };
 
+            //Game introduction
+
             Console.Clear();
             Console.WriteLine("Well, nice to meet you " + player.Name + ". Since you're new here let me point you in the right direction.");
-            Console.WriteLine("That building right there is the Inn. Head straight there Connor willl help you with anything you need.\n");
-            Console.WriteLine("Push ENTER to go to inn\n");
+            Console.WriteLine("That building right there is the Inn. Head straight there Connor will help you with anything you need.\n");
+            Console.WriteLine("Push ENTER\n");
             Console.ReadLine();
 
 
@@ -66,9 +60,7 @@ namespace OregonTrail
 
             Console.Clear();
             Console.WriteLine("Howdy " + player.Name + "! Welcome to the Journeyman's Mercantile." +
-                " There's a large selection of item. \nChoose what you like.\nEhem...\nFor the right price that is.\n\n");
-            Console.Write("Enter the item you'd like to purchase\n\n  #1: Food\n  #2: Ammo\n  #3: Repair kit\n" +
-                "  #4: Lever Action Rifle\n\n exit: Leave store\n\n\n");
+                " There's a large selection of items. \nChoose what you like.\nEhem...\nFor the right price that is of course.\n\n");
 
 
 
@@ -76,27 +68,148 @@ namespace OregonTrail
 
             bool doneViewingStoreItems = false;
 
-            while (!doneViewingStoreItems) {
+            while (!doneViewingStoreItems)
+            {
+                Console.Write("Enter the item you'd like to purchase\n\n  #1: Crate of Food\n  #2: Ammo\n  #3: Lever Action Rifle\n" +
+                    "  #4: Bourbon\n\n exit: Leave store\n\n\n");
+
                 string playerResponse = Console.ReadLine();
                 if (playerResponse == "1")
                 {
-                    Console.WriteLine("You have entered the number 1");
+                    Console.Clear();
+                    Console.WriteLine("Do you want to purchase a crate of food supplies?\n(y)\n(n)\n\n\n");
+
+                    //This loop confirms that the player wishes to purchase item
+
+                    bool playerHasDecided = false;
+                    while (!playerHasDecided)
+                    {
+                        string playerChoice = Console.ReadLine();
+                        if (playerChoice == "y")
+                        {
+                            Console.WriteLine("These will come in handy. Man's got to eat!");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else if (playerChoice == "n")
+                        {
+                            Console.WriteLine("I have enough food for now");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("What? That doesn't make sense... Try again\n\nType (y) to confirm purchase\nor (n) to cancel\n\n");
+                            Console.WriteLine("Do you want to purchase a crate of food supplies?\n(y)\n(n)\n\n\n");
+                        }
+                    }
+
                 }
                 else if (playerResponse == "2")
                 {
-                    Console.WriteLine("You have chosen 2");
+                    Console.Clear();
+                    Console.WriteLine("Do you want to purchase a box of ammo?\n(y)\n(n)\n\n\n");
+
+                    //This loop confirms that the player wishes to purchase item
+
+                    bool playerHasDecided = false;
+                    while (!playerHasDecided)
+                    {
+                        string playerChoice = Console.ReadLine();
+                        if (playerChoice == "y")
+                        {
+                            Console.WriteLine("Love the smell of gun powder in the air. Thank you!");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else if (playerChoice == "n")
+                        {
+                            Console.WriteLine("I guess I there's such a thing as buying too much ammo");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("What? That doesn't make sense... Try again\n\nType (y) to confirm purchase\nor (n) to cancel\n\n");
+                            Console.WriteLine("Do you want to purchase a box of ammo?\n(y)\n(n)\n\n\n");
+                        }
+                    }
                 }
                 else if (playerResponse == "3")
                 {
-                    Console.WriteLine("You have chosen 3");
+                    Console.Clear();
+                    Console.WriteLine("Do you want to purchase a new rifle?\n(y)\n(n)\n\n\n");
+
+                    //This loop confirms that the player wishes to purchase item
+
+                    bool playerHasDecided = false;
+                    while (!playerHasDecided)
+                    {
+                        string playerChoice = Console.ReadLine();
+                        if (playerChoice == "y")
+                        {
+                            Console.WriteLine("This is the difference between life and death on the trail");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else if (playerChoice == "n")
+                        {
+                            Console.WriteLine("Oops, I meant to point to the ammo! I guess I should lay off the bourbon, huh?");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("What? That doesn't make sense... Try again\n\nType (y) to confirm purchase\nor (n) to cancel\n\n");
+                            Console.WriteLine("Do you want to purchase a new rifle?\n(y)\n(n)\n\n\n");
+                        }
+                    }
                 }
                 else if (playerResponse == "4")
                 {
-                    Console.WriteLine("You have chosen 4");
+                    Console.Clear();
+                    Console.WriteLine("Do you want to purchase a bottle of bourbon?\n(y)\n(n)\n\n\n");
+
+                    //This loop confirms that the player wishes to purchase item
+
+                    bool playerHasDecided = false;
+                    while (!playerHasDecided)
+                    {
+                        string playerChoice = Console.ReadLine();
+                        if (playerChoice == "y")
+                        {
+                            Console.WriteLine("You would not believe how hard this is to make while traveling!");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else if (playerChoice == "n")
+                        {
+                            Console.WriteLine("I think thats all I need");
+                            playerHasDecided = true;
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("What? That doesn't make sense... Try again\n\nType (y) to confirm purchase\nor (n) to cancel\n\n");
+                            Console.WriteLine("Do you want to purchase a bottle of bourbon?\n(y)\n(n)\n\n\n");
+                        }
+                    }
                 }
                 else if (playerResponse == "exit")
                 {
-                    Console.WriteLine("Exiting store");
+                    Console.WriteLine("Leaving Journeyman's Mercantile");
                     Console.ReadLine();
                     doneViewingStoreItems = true;
                 }
@@ -105,8 +218,6 @@ namespace OregonTrail
                     Console.WriteLine("That's not an item in the store. Please choose again");
                 }
             }
-
-            //  Use "IF" statement to find the selection the user made
 
 
         }
@@ -130,8 +241,8 @@ namespace OregonTrail
             Random playerDamageGen = new Random();
             int playerDamageQuantity = playerDamageGen.Next(35, 60);
 
-            //This generates a value that can be used to determain if the player strikes with a critical strike
-            
+            //Tbhis generates a value that can be used to determain if the player strikes with a critical strike
+
             Random critDamageGen = new Random();
             int critValue = critDamageGen.Next(0, 100);
 
@@ -143,8 +254,8 @@ namespace OregonTrail
             }
 
             Console.WriteLine(playerDamageQuantity);
-            
+
         }
-    }
+    }  
 
 }
