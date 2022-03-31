@@ -1,5 +1,7 @@
 # Oregon-Trail-CS-
-Oregon trail repo is a console app styled rpg game that the player gets to create their character than purchase items they will need on their journey west.
+
+
+Oregon trail repo is a console app text based rpg game that the player gets to create their character than purchase items they will need on their journey west.
 The player will enter the start town then be asked to name their character. After naming their character they will then be able to shop for supplies
 for their journey. After they have gathered all they want from the store they start their journey west and almost immedietly encounter issues.
 
@@ -22,5 +24,7 @@ Features:
 
 
 
- Necessary Add-ons:
+ Necessary Downloads:
 Newton.Json package is necessary for the program to run properly
+.NET5
+Visual Studio Community
