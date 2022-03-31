@@ -1,13 +1,20 @@
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace OregonTrail
 {
+
+    
+
+
+
     class Program
     {
 
         static void Main(string[] args)
         {
-
+            PlayerReview();
             // Inventory (the items carried on person)
             // double money;
 
@@ -222,6 +229,9 @@ namespace OregonTrail
 
         }
 
+
+
+
         /// <summary>
         /// This is the method generator for how much damage an enemy will do per turn.
         /// </summary>
@@ -231,7 +241,9 @@ namespace OregonTrail
             Random damageGen = new Random();
             int damageQuantity = damageGen.Next(5, 10);
             Console.WriteLine(damageQuantity);
-        }
+        } //End of EmemyDamage Method
+        
+
 
         /// <summary>
         /// This is the method that generates damage dealt by the playable character
@@ -254,8 +266,26 @@ namespace OregonTrail
             }
 
             Console.WriteLine(playerDamageQuantity);
+        } //End of PlayerDamage Method
 
+
+        /// <summary>
+        /// This method asks the player to rate the game experience then prints their answers to a JSON file.
+        /// </summary>
+        static void PlayerReview()
+        {
+            Reviews reviews = new Reviews()
+            {
+                GamerName = "DSAs",
+                GameRating = 10,
+                Comments = "Insert text"
+
+            };
+            string strJsonReviewFile = JsonConvert.SerializeObject(reviews);
+            Console.WriteLine(strJsonReviewFile);
         }
-    }  
 
-}
+
+    } //End Class Program 
+
+} //End Namespace
