@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
@@ -274,15 +275,64 @@ namespace OregonTrail
         /// </summary>
         static void PlayerReview()
         {
+            //Player tells us their first name for the review
+            Console.WriteLine("We would really appreciate any feedback you have on the game structure so far.\n" +
+                "First what's your first name?");
+            string firstName = Console.ReadLine();
+
+            //Player tells us their last name
+            Console.WriteLine("Last name?");
+            string lastName = Console.ReadLine();
+
+            //Player is asked to rate
+            Console.WriteLine("On a scale from 1 to 10 rate your experience. 10 being a perfect game and 1 being terrible");
+
+            //Create a while loop to make sure they type a number between 1-10
+            bool hasRatedGame = false;
+            int ratingNum = 0;
+            
+            while (!hasRatedGame)
+            {
+
+                if (!int.TryParse(Console.ReadLine(), out int num))
+                {
+                    Console.WriteLine("Thats not a valid input");
+                }
+                else
+                {
+                    if (num > 10 | num < 1)
+                    {
+                        Console.WriteLine("That's not a valid Number");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You have rated the game as " + num + " out of 10");
+                        ratingNum = num;
+                        hasRatedGame = true;
+                    }
+                }
+
+            } //end of while loop
+
+            //Ask the Player to write a review
+            Console.Clear();
+            Console.WriteLine("Would you please also write any suggestions you have for the game developers to make the game better");
+            string reviewComment = Console.ReadLine();
+            Console.WriteLine("Thank you " + firstName + " for the review. We will take your suggestions into consideration!");
+
+
+
             Reviews reviews = new Reviews()
             {
-                GamerName = "DSAs",
-                GameRating = 10,
-                Comments = "Insert text"
+                GamerName = firstName + " " + lastName,
+                GameRating = ratingNum,
+                Comments = reviewComment
 
             };
             string strJsonReviewFile = JsonConvert.SerializeObject(reviews);
             Console.WriteLine(strJsonReviewFile);
+            File.WriteAllText(@"gamereviews.json", strJsonReviewFile);
+            Console.WriteLine("Json is Stored");
         }
 
 
