@@ -15,14 +15,11 @@ namespace OregonTrail
 
         static void Main(string[] args)
         {
-            // Inventory (the items carried on person)
-            // double money;
 
-            //Store (items for sale)
+            var newEnemy = new Bear();
+            newEnemy.Name = "Griz Zelly the Nelly Bear";
 
-
-
-            //Wagon (items on buggie)
+            Console.WriteLine("You have encountered " + newEnemy.Name + "! Runnnnnnnnn!!!" + newEnemy.Health);
 
             //Create player character
 
