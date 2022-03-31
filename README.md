@@ -9,15 +9,15 @@ The game contains several C# features
 
 4 methods: 
 Some of them not yet implimented into the game 
- -EnemyDamage    is the method that calculates enemy damage at random
- -PlayerDamage   is the method that calculates the players damage and critical strike damage as well as regulates the odds of critiacal strikes
- -Store          is the method that dives the player into a store menu that allows them to purchase items  
- -PlayerReview   This method allows the player to review the game then stores their answers in a json file
+ - EnemyDamage    is the method that calculates enemy damage at random
+ - PlayerDamage   is the method that calculates the players damage and critical strike damage as well as regulates the odds of critiacal strikes
+ - Store          is the method that dives the player into a store menu that allows them to purchase items  
+ - PlayerReview   This method allows the player to review the game then stores their answers in a json file
 
 Features:
--Masterloops  
+- Masterloops  
      The loops are in the Store and PlayerReview methods. They run to ensure the player chooses a valid selection in the menus.
--Additional class that inherits properties from it's parent
+- Additional class that inherits properties from it's parent
      The Bear class inherits from the enemy class, taking on all the characteristics exept has higher health.
 -
 
