@@ -19,7 +19,7 @@ Features:
      The loops are in the Store and PlayerReview methods. They run to ensure the player chooses a valid selection in the menus.
 - Additional class that inherits properties from it's parent
      The Bear class inherits from the enemy class, taking on all the characteristics exept has higher health.
--
+- Method Review Creates a json file and serializes it with information taken from a servey That the user takes when the method is called.
 
 
 
